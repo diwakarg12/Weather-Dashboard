@@ -8,7 +8,7 @@ const TempAndDetail = ({ weather, units }) => {
     feels_like,
     temp_max,
     temp_min,
-    humidity, 
+    humidity,
     speed,
     details,
     icon,

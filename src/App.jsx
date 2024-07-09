@@ -72,7 +72,7 @@ function App() {
           <TempAndDetail weather={weather} units={units} />
           <Forecast title='3 Hour Step Forecast' data={weather.hourly} />
           <Forecast title='5 Day Forecast' data={weather.daily} />{' '}
-          <Chart data={weather.daily} />;
+          <Chart data={weather.daily} />
         </>
       )}
       <Toaster position='	top-right' />

@@ -70,9 +70,8 @@ const formatForecastWeather = (secs, offset, data) => {
       icon: iconUrlFromCode(f.weather[0].icon),
       date: f.dt_txt,
     }))
-    .slice(0, 5); // Adjust this if you want more hourly forecasts
+    .slice(0, 5);
 
-  // daily forecast for 7 days
   const daily = data
     .filter((f) => f.dt_txt.slice(-8) === '00:00:00')
     .map((f) => ({
@@ -80,8 +79,7 @@ const formatForecastWeather = (secs, offset, data) => {
       title: formatToLocalTime(f.dt, offset, 'cccc'), // Use 'cccc' for full day name
       icon: iconUrlFromCode(f.weather[0].icon),
       date: f.dt_txt,
-    }))
-    .slice(0, 7); // Adjust this to get 7 days of daily forecasts
+    }));
 
   return { hourly, daily };
 };

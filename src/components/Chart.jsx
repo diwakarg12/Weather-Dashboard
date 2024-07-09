@@ -2,6 +2,7 @@
 // import React from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { Typography } from '@mui/material';
 
 const Chart = ({ data }) => {
   const chartData = {
@@ -31,6 +32,9 @@ const Chart = ({ data }) => {
 
   return (
     <div className='my-6'>
+      <Typography variant='h5' fontSize={'2rem'} fontWeight={'700'}>
+        Graph
+      </Typography>
       <Line data={chartData} options={options} />
     </div>
   );
